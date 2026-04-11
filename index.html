@@ -177,12 +177,20 @@
             <a href="https://124421.pythonanywhere.com/" class="nav-button">Chat</a>
         </div>
     </main>
+    <audio id="aud">
+  <source src="intro.mp3" type="audio/mp3">
+</audio>
 
     <footer>
         &copy; 2026 ACHIEVEMENTS.
     </footer>
 
     <script>
+        intro = document.getElementById("aud");
+        function play(){
+            if(intro.play()){intro.pause();}
+            else{intro.play();}
+        }
         // JS for a subtle parallax effect on the container
         document.addEventListener('mousemove', (e) => {
             const container = document.querySelector('.gallery-container');
