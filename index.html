@@ -101,21 +101,27 @@
             justify-content: center;
         }
 
-        /* --- Sample Button Style (Add your buttons here) --- */
+        /* --- Sample Button Style --- */
         .nav-button {
             background: transparent;
             color: var(--text-color);
             border: 1px solid var(--text-color);
-            padding: 20px;
-            font-size: 1rem;
+            padding: 20px 15px;
+            font-size: clamp(0.9rem, 1.5vw, 1rem); /* Responsive title font */
+            font-weight: 600;
             text-transform: uppercase;
             cursor: pointer;
             transition: all 0.4s ease;
             text-align: center;
             text-decoration: none;
+            
+            /* Changed to column to stack Title and Tech Stack */
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between; /* Pushes tech stack to the bottom */
+            min-height: 140px; /* Ensures uniform card height */
+            word-wrap: break-word;
         }
 
         .nav-button:hover {
@@ -124,6 +130,25 @@
             border-color: var(--accent-color);
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
+        }
+
+        /* Hover effect specifically for the tech text inside the button */
+        .nav-button:hover p.tech {
+            color: #1a1a1a; 
+            opacity: 0.8;
+        }
+
+        /* --- Tech Stack Text --- */
+        p.tech {
+            font-size: 0.7rem;
+            color: rgba(224, 224, 224, 0.6); 
+            font-weight: 700;
+            line-height: 1.5;
+            white-space: normal; 
+            word-wrap: break-word;
+            margin: 15px 0 0 0; 
+            letter-spacing: 0.5px;
+            transition: color 0.4s ease;
         }
 
         /* --- Animations --- */
@@ -167,15 +192,50 @@
 
     <main class="gallery-container">
         <div class="button-grid" id="main-nav">
-            <a href="https://78643.pythonanywhere.com/" class="nav-button">Data Breach Checker<br><h5>python(Flask) | HTML | CSS | JS | pythonanywhere</h5></a>
-            <a href="https://aakashrawat78643.pythonanywhere.com/" class="nav-button">Cloud Music<br><h5>python(Flask) | HTML | CSS | JS | pythonanywhere</h5></a>
-            <a href="https://aakashrawat-78643.github.io/FOOD-MANIA/" class="nav-button">Food Order Platform<br><h5>HTML | CSS | JS | github</h5></a>
-            <a href="https://aakashrawat-78643.github.io/aakashsite/" class="nav-button">Anime Site<br><h5>HTML | CSS | JS | github</h5></a>
-            <a href="https://aakashrawat-78643.github.io/java/" class="nav-button">Java Code (CLI)<br><h5>Java | JS | programiz Online Compiler</h5></a>
-            <a href="https://adorable-dusk-d1da83.netlify.app/" class="nav-button">Story Maker<br><h5>HTML | CSS | JS | netlify</h5></a>
-            <a href="https://javacli.pythonanywhere.com/" class="nav-button">Notice Board<br><h5>python(Flask) | SQL | HTML | CSS | JS | pythonanywhere</h5></a>
-            <a href="https://124421.pythonanywhere.com/" class="nav-button">Chat<br><h5>python(Flask) | SQL | HTML | CSS | JS | pythonanywhere</h5></a>
-            <a href="https://movierec.pythonanywhere.com/" class="nav-button">Movies Recommendation System<br><h5>python(Flask,sklearn) | HTML | CSS | JS | pythonanywhere | jupyter notebook</h5></a>
+            <a href="https://78643.pythonanywhere.com/" target="_blank" class="nav-button">
+                <span>Data Breach Checker</span>
+                <p class="tech">python(Flask) | HTML | CSS | JS | pythonanywhere</p>
+            </a>
+            
+            <a href="https://aakashrawat78643.pythonanywhere.com/" target="_blank" class="nav-button">
+                <span>Cloud Music</span>
+                <p class="tech">python(Flask) | HTML | CSS | JS | pythonanywhere</p>
+            </a>
+            
+            <a href="https://aakashrawat-78643.github.io/FOOD-MANIA/" target="_blank" class="nav-button">
+                <span>Food Order Platform</span>
+                <p class="tech">HTML | CSS | JS | github</p>
+            </a>
+            
+            <a href="https://aakashrawat-78643.github.io/aakashsite/" target="_blank" class="nav-button">
+                <span>Anime Site</span>
+                <p class="tech">HTML | CSS | JS | github</p>
+            </a>
+            
+            <a href="https://aakashrawat-78643.github.io/java/" target="_blank" class="nav-button">
+                <span>Java Code (CLI)</span>
+                <p class="tech">Java | JS | programiz Online Compiler</p>
+            </a>
+            
+            <a href="https://adorable-dusk-d1da83.netlify.app/" target="_blank" class="nav-button">
+                <span>Story Maker</span>
+                <p class="tech">HTML | CSS | JS | netlify</p>
+            </a>
+            
+            <a href="https://javacli.pythonanywhere.com/" target="_blank" class="nav-button">
+                <span>Notice Board</span>
+                <p class="tech">python(Flask) | SQL | HTML | CSS | JS | pythonanywhere</p>
+            </a>
+            
+            <a href="https://124421.pythonanywhere.com/" target="_blank" class="nav-button">
+                <span>Chat</span>
+                <p class="tech">python(Flask) | SQL | HTML | CSS | JS | pythonanywhere</p>
+            </a>
+            
+            <a href="https://movierec.pythonanywhere.com/" target="_blank" class="nav-button">
+                <span>Movies Recommendation System</span>
+                <p class="tech">python(Flask,sklearn) | HTML | CSS | JS | pythonanywhere | jupyter notebook</p>
+            </a>
         </div>
     </main>
     <audio id="aud">
