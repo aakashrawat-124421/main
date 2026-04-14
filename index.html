@@ -94,12 +94,8 @@
         }
 
         .button-grid {
-            display: grid;
-            /* This magic line handles the responsiveness and zooming */
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
-            justify-content: center;
-            align-items: start;
+            column-width: 180px; 
+            column-gap: 20px;
         }
 
         /* --- Sample Button Style --- */
