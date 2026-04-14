@@ -100,10 +100,7 @@
 
         /* --- Sample Button Style --- */
         .nav-button {
-            background: transparent;
             color: var(--text-color);
-            border: 1px solid var(--text-color);
-            padding: 20px 15px;
             font-size: clamp(0.9rem, 1.5vw, 1rem); /* Responsive title font */
             font-weight: 600;
             text-transform: uppercase;
@@ -123,14 +120,18 @@
             align-items: center;
             justify-content: space-between; /* Pushes tech stack to the bottom */
             word-wrap: break-word;
+            padding: 25px 20px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            border-radius: 12px;
         }
 
         .nav-button:hover {
-            background: var(--accent-color);
             color: #000;
             border-color: var(--accent-color);
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 25px rgba(197, 160, 89, 0.15);
         }
 
         /* Hover effect specifically for the tech text inside the button */
@@ -187,7 +188,26 @@
         }
         /* Changes the project title to a dark color when hovering */
         .nav-button:hover span {
-            color: #1a1a1a; 
+            text-shadow: 0 0 8px rgba(197, 160, 89, 0.4);
+            color: var(--accent-color);
+        }
+        .tech-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .tech-tag {
+            background: rgba(197, 160, 89, 0.1);
+            color: var(--accent-color);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -200,58 +220,118 @@
     </header>
 
     <main class="gallery-container">
-        <div class="button-grid" id="main-nav">
-            <a href="https://78643.pythonanywhere.com/" class="nav-button">
-                <span>Data Breach Checker</span>
-                <p class="tech">python(Flask) | HTML | CSS | JS | pythonanywhere</p>
-            </a>
-            
-            <a href="https://aakashrawat78643.pythonanywhere.com/" class="nav-button">
-                <span>Cloud Music</span>
-                <p class="tech">python(Flask) | HTML | CSS | JS | pythonanywhere</p>
-            </a>
-            
-            <a href="https://aakashrawat-78643.github.io/FOOD-MANIA/" class="nav-button">
-                <span>Food Order Platform</span>
-                <p class="tech">HTML | CSS | JS | github</p>
-            </a>
-            
-            <a href="https://aakashrawat-78643.github.io/aakashsite/" class="nav-button">
-                <span>Anime Site</span>
-                <p class="tech">HTML | CSS | JS | github</p>
-            </a>
-            
-            <a href="https://aakashrawat-78643.github.io/java/" class="nav-button">
-                <span>Java Code (CLI)</span>
-                <p class="tech">Java | JS | programiz Online Compiler</p>
-            </a>
-            
-            <a href="https://adorable-dusk-d1da83.netlify.app/" class="nav-button">
-                <span>Story Maker</span>
-                <p class="tech">HTML | CSS | JS | netlify</p>
-            </a>
-            
-            <a href="https://javacli.pythonanywhere.com/" class="nav-button">
-                <span>Notice Board</span>
-                <p class="tech">python(Flask) | SQL | HTML | CSS | JS | pythonanywhere</p>
-            </a>
-            
-            <a href="https://124421.pythonanywhere.com/" class="nav-button">
-                <span>Chat</span>
-                <p class="tech">python(Flask) | SQL | HTML | CSS | JS | pythonanywhere</p>
-            </a>
-            
-            <a href="https://movierec.pythonanywhere.com/" class="nav-button">
-                <span>Movies Recommendation System</span>
-                <p class="tech">python(Flask,sklearn) | HTML | CSS | JS | pythonanywhere | jupyter notebook</p>
-            </a>
+    <div class="button-grid" id="main-nav">
+        
+        <a href="https://78643.pythonanywhere.com/" class="nav-button">
+            <span>Data Breach Checker</span>
+            <div class="tech-container">
+                <span class="tech-tag">python(Flask)</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JS</span>
+                <span class="tech-tag">pythonanywhere</span>
+            </div>
+        </a>
+        
+        <a href="https://aakashrawat78643.pythonanywhere.com/" class="nav-button">
+            <span>Cloud Music</span>
+            <div class="tech-container">
+                <span class="tech-tag">python(Flask)</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JS</span>
+                <span class="tech-tag">pythonanywhere</span>
+            </div>
+        </a>
+        
+        <a href="https://aakashrawat-78643.github.io/FOOD-MANIA/" class="nav-button">
+            <span>Food Order Platform</span>
+            <div class="tech-container">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JS</span>
+                <span class="tech-tag">github</span>
+            </div>
+        </a>
+        
+        <a href="https://aakashrawat-78643.github.io/aakashsite/" class="nav-button">
+            <span>Anime Site</span>
+            <div class="tech-container">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JS</span>
+                <span class="tech-tag">github</span>
+            </div>
+        </a>
+        
+        <a href="https://aakashrawat-78643.github.io/java/" class="nav-button">
+            <span>Java Code (CLI)</span>
+            <div class="tech-container">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">JS</span>
+                <span class="tech-tag">programiz Online Compiler</span>
+            </div>
+        </a>
+        
+        <a href="https://adorable-dusk-d1da83.netlify.app/" class="nav-button">
+            <span>Story Maker</span>
+            <div class="tech-container">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JS</span>
+                <span class="tech-tag">netlify</span>
+            </div>
+        </a>
+        
+        <a href="https://javacli.pythonanywhere.com/" class="nav-button">
+            <span>Notice Board</span>
+            <div class="tech-container">
+                <span class="tech-tag">python(Flask)</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JS</span>
+                <span class="tech-tag">pythonanywhere</span>
+            </div>
+        </a>
+        
+        <a href="https://124421.pythonanywhere.com/" class="nav-button">
+            <span>Chat</span>
+            <div class="tech-container">
+                <span class="tech-tag">python(Flask)</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JS</span>
+                <span class="tech-tag">pythonanywhere</span>
+            </div>
+        </a>
+        
+        <a href="https://movierec.pythonanywhere.com/" class="nav-button">
+            <span>Movies Recommendation System</span>
+            <div class="tech-container">
+                <span class="tech-tag">python(Flask,sklearn)</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JS</span>
+                <span class="tech-tag">pythonanywhere</span>
+                <span class="tech-tag">jupyter notebook</span>
+            </div>
+        </a>
 
-            <a href="https://aakash78643-carinfo.hf.space/" class="nav-button">
-                <span>Vehicle Information</span>
-                <p class="tech">Python (Flask, EasyOCR, cv2) | HTML | CSS | JS | Hugging Face</p>
-            </a>
-        </div>
-    </main>
+        <a href="https://aakash78643-carinfo.hf.space/" class="nav-button">
+            <span>Vehicle Information</span>
+            <div class="tech-container">
+                <span class="tech-tag">Python (Flask, EasyOCR, cv2)</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JS</span>
+                <span class="tech-tag">Hugging Face</span>
+            </div>
+        </a>
+        
+    </div>
+</main>
     <audio id="aud">
   <source src="intro.mp3" type="audio/mp3">
 </audio>
